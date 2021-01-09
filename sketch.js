@@ -21,7 +21,7 @@ function setup() {
 	//Create the Bodies Here.
 	ground = new Ground(500,590,1000,40);
 
-	paperBall = new Paper(85,300,5);
+	paperBall = new Paper(85,300,20,20);
 	boxLeft = new Box(640,520,20,100);
 	boxMiddle = new Box(750,560,200,20);
 	boxRight = new Box(855,520,20,100);
@@ -48,6 +48,6 @@ function draw() {
 
 function keyPressed(){
 	if (keyCode === UP_ARROW){
-		Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x: 4,y: -4});
+		Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x: 65,y: -65});
 	}
 }

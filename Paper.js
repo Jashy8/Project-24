@@ -1,20 +1,3 @@
-/*class Paper{
-    constructor(x,y,radius){
-        var options = {
-            'isStatic': false,
-            'restitution': 0.3,
-            'friction': 0.5,
-            'density': 1.2
-        };
-    };
-        display(){
-            push();
-            fill(255); 
-            pop();
-        };
-};
-*/
-
 class Paper {
     constructor(x,y,radius) {
       var options = {
@@ -29,8 +12,8 @@ class Paper {
     }
     display(){
       var pos =this.body.position;
-      ellipseMode(CENTER);
+      ellipseMode(RADIUS);
       fill(255);
-      ellipse(pos.x, pos.y);
+      ellipse(pos.x, pos.y, this.radius, this.radius);
     }
   };
